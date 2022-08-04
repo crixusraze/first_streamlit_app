@@ -2,7 +2,7 @@ import streamlit
 import pandas
 import snowflake.connector
 
-# import requests
+import requests
 from urllib.error import URLError
 
 
@@ -35,13 +35,13 @@ try:
    if not fruit_choice:
         streamlit.error("Please select a fruit to get info.")
    else:
-        back_from_function = get_fruityvice_data(this_fruit_choice)
+        back_from_function = get_fruityvice_data(fruit_choice)
         streamlit.dataframe(back_from_function)
 
 
 
 # don't run anything past here  while we troubleshoot
-streamlit.stop()
+ streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
