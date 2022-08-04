@@ -35,7 +35,7 @@ try:
    if not fruit_choice:
         streamlit.error("Please select a fruit to get info.")
    else:
-        back_from_function = get_fruityvice_data(fruit_choice)
+        back_from_function = get_fruityvice_data(this_fruit_choice)
         streamlit.dataframe(back_from_function)
 
 
