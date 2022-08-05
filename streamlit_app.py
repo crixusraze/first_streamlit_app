@@ -1,6 +1,6 @@
 import streamlit 
 import pandas
-from urllib.error import ULRError
+# from urllib.error import ULRError
 
 
 streamlit.title('Diet')
