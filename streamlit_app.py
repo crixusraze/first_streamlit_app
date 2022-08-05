@@ -39,7 +39,6 @@ try:
         back_from_function = get_fruityvice_data(fruit_choice)
         streamlit.dataframe(back_from_function)
 
-streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
